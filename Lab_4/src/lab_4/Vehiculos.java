@@ -13,5 +13,37 @@ public class Vehiculos {
     private Random r = new Random();
     private int dano = 99 + r.nextInt(151);
     private int vida = 499 + r.nextInt(501);
-    private Jugador jugador;   
+    private Jugador jugador;
+
+    public Vehiculos() {
+    }
+
+    public Vehiculos(Jugador jugador) {
+        this.jugador = jugador;
+    }
+
+    public int getDano() {
+        return dano;
+    }
+
+    public void setDano(int dano) {
+        this.dano = dano;
+    }
+
+    public int getVida() {
+        return vida;
+    }
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
+    public Jugador getJugador() {
+        return jugador;
+    }
+
+    public void setJugador(Jugador jugador) {
+        this.jugador = jugador;
+    }
+    
 }
