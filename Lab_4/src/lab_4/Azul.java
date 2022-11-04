@@ -5,20 +5,10 @@
  */
 package lab_4;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author joseph
  */
-public class Lab_4 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-        
-    }
+public class Azul {
     
 }
