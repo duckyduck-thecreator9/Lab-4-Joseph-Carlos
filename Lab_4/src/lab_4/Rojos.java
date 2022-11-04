@@ -9,6 +9,6 @@ package lab_4;
  *
  * @author joseph
  */
-public class Rojos {
+public class Rojos extends Jugador{
     
-}
+}//fin clase 
