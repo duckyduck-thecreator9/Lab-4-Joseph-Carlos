@@ -28,8 +28,6 @@ import java.awt.Color;
         
         if (x >= 0 && x <= 10) {
         this.x = x;
-        } else {
-            throw new MiException("eso es out of bounds");
         }
     }
 
