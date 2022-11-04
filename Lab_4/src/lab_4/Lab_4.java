@@ -95,74 +95,41 @@ public class Lab_4 {
         //creacion de matrix
         
         Object[][] mapa = new Object[10][10];
-//        for (int i = 0; i < mapa.length; i++) {
-//            for (int j = 0; j < mapa[i].length; j++) {
-//                mapa[i][j] = "[ ]";
-//            }
-//        }
-//        for (int r = 0; r < mapa.length; r++) {
-//        for (int i = 0; i < Azul.size(); i++) {
-//            
-//            if (Azul.get(i) instanceof Barcos) {
-//            int x = ((Barcos)Azul.get(i)).getX();
-//            int y = ((Barcos)Azul.get(i)).getY();
-//            mapa[y][x] = ((Barcos)Azul.get(i));
-//            }
-//            if (Azul.get(i) instanceof Aviones) {
-//            int x = ((Aviones)Azul.get(i)).getX();
-//            int y = ((Aviones)Azul.get(i)).getY();
-//            mapa[y][x] = ((Aviones)Azul.get(i));
-//            }
-//            if (Azul.get(i) instanceof Submarinos) {
-//            int x = ((Submarinos)Azul.get(i)).getX();
-//            int y = ((Submarinos)Azul.get(i)).getY();
-//            mapa[y][x] = ((Submarinos)Azul.get(i));
-//            }
-//        }
-//        for (int i = 0; i < Rojo.size(); i++) {
-//            
-//            if (Rojo.get(i) instanceof Barcos) {
-//            int x = ((Barcos)Rojo.get(i)).getX();
-//            int y = ((Barcos)Rojo.get(i)).getY();
-//            mapa[y][x] = ((Barcos)Rojo.get(i));
-//            }
-//            if (Rojo.get(i) instanceof Aviones) {
-//            int x = ((Aviones)Rojo.get(i)).getX();
-//            int y = ((Aviones)Rojo.get(i)).getY();
-//            mapa[y][x] = ((Aviones)Rojo.get(i));
-//            }
-//            if (Rojo.get(i) instanceof Submarinos) {
-//            int x = ((Submarinos)Rojo.get(i)).getX();
-//            int y = ((Submarinos)Rojo.get(i)).getY();
-//            mapa[y][x] = ((Submarinos)Rojo.get(i));
-//            
-//            }
-//        }
+
         for (int i = 0; i < mapa.length; i++) {
             for (int j = 0; j < mapa[i].length; j++) {
                 boolean pos = true;
-                int x = 0;
-                int y = 0;
-                String ficha = "";
+                int x;
+                int y;
+                String ficha = null;
                 //validacion rojos
                 for (int g = 0; g < Rojo.size(); g ++) {
                 if (Rojo.get(g) instanceof Barcos) {
             x = ((Barcos)Rojo.get(g)).getX();
             y = ((Barcos)Rojo.get(g)).getY();
+            if (x == j && y == i) {
             mapa[y][x] = ((Barcos)Rojo.get(g));
             ficha = "[b]";
+            pos = false;
+            }
             }
             if (Rojo.get(g) instanceof Aviones) {
             x = ((Aviones)Rojo.get(g)).getX();
             y = ((Aviones)Rojo.get(g)).getY();
+            if (x == j && y == i) {
             mapa[y][x] = ((Aviones)Rojo.get(g));
             ficha = "[a]";
+            pos = false;
+            }
             }
             if (Rojo.get(g) instanceof Submarinos) {
             x = ((Submarinos)Rojo.get(g)).getX();
             y = ((Submarinos)Rojo.get(g)).getY();
+            if (x == j && y == i) {
             mapa[y][x] = ((Submarinos)Rojo.get(g));
             ficha = "[s]";
+            pos = false;
+            }
             }
             }
             //fin rojos
@@ -171,29 +138,34 @@ public class Lab_4 {
             if (Azul.get(m) instanceof Barcos) {
             x = ((Barcos)Azul.get(m)).getX();
             y = ((Barcos)Azul.get(m)).getY();
+            if (x == j && y == i) {
             mapa[y][x] = ((Barcos)Azul.get(m));
             ficha = "[B]";
+            pos = false;
+            }
             }
             if (Azul.get(m) instanceof Aviones) {
             x = ((Aviones)Azul.get(m)).getX();
             y = ((Aviones)Azul.get(m)).getY();
+            if (x == j && y == i) {
             mapa[y][x] = ((Aviones)Azul.get(m));
             ficha = "[A]";
+            pos = false;
+            }
             }
             if (Azul.get(m) instanceof Submarinos) {
             x = ((Submarinos)Azul.get(m)).getX();
             y = ((Submarinos)Azul.get(m)).getY();
+            if (x == j && y == i) {
             mapa[y][x] = ((Submarinos)Azul.get(m));
-            ficha = "[S]";           
+            ficha = "[S]";
+            pos = false;
             }
             }
-                if (x == j && y == i) {
-                    pos = false;
-                }
+                }    
                 if (pos == true) {
                     System.out.print("[ ]");
-                }
-                if (pos == false) {
+                } else if (pos == false) {
                     System.out.print(ficha);
                 }
             }
