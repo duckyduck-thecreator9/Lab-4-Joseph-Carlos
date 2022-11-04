@@ -4,13 +4,17 @@
  * and open the template in the editor.
  */
 package lab_4;
-
+import java.util.Random;
 /**
  *
  * @author joseph
  */
 public class Vehiculos {
-    
-     
-    
-}//fin clase 
+
+    private Random r = new Random();
+    private int dano = 99 + r.nextInt(151);
+    private int vida = 499 + r.nextInt(501);
+    private Jugador jugador;
+   
+}
+

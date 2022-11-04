@@ -9,9 +9,6 @@ package lab_4;
  *
  * @author joseph
  */
-
-
-public class Azul extends Equipo{
-
+public class MiException extends Exception{
     
 }
