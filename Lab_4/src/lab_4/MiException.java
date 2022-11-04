@@ -5,10 +5,28 @@
  */
 package lab_4;
 
+import java.awt.Color;
+
 /**
  *
  * @author joseph
  */
 public class MiException extends Exception{
-    
+    private Color color;
+
+    public MiException() {
+    }
+
+    public MiException(Color color, String message) {
+        super(message);
+        this.color = color;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
 }

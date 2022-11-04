@@ -5,6 +5,8 @@
  */
 package lab_4;
 
+import java.awt.Color;
+
 /**
  *
  * @author joseph
@@ -23,8 +25,11 @@ package lab_4;
     }
 
     public void setX(int x) {
+        
         if (x >= 0 && x <= 10) {
         this.x = x;
+        } else {
+            throw new MiException("eso es out of bounds");
         }
     }
 

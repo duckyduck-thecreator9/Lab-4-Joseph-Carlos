@@ -13,6 +13,5 @@ public class Vehiculos {
     private Random r = new Random();
     private int dano = 99 + r.nextInt(151);
     private int vida = 499 + r.nextInt(501);
-    private Jugador jugador;
-    private 
+    private Jugador jugador;   
 }
