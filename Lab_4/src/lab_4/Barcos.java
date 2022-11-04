@@ -49,5 +49,15 @@ public class Barcos extends Vehiculos{
         }
     }
     
-    
+    public double Movimiento(Object mapa, int x1, int x2, int y1, int y2){
+        double mov = 0.0;
+        
+        mov = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        return mov;
+    }
+
+    @Override
+    public double Movimiento(int x1, int x2, int y1, int y2) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

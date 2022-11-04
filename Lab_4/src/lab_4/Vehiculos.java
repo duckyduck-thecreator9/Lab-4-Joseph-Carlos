@@ -9,7 +9,7 @@ import java.util.Random;
  *
  * @author joseph
  */
-public class Vehiculos {
+public abstract class Vehiculos implements Movement{
     private Random r = new Random();
     private int dano = 99 + r.nextInt(151);
     private int vida = 499 + r.nextInt(501);
@@ -46,4 +46,5 @@ public class Vehiculos {
         this.jugador = jugador;
     }
     
+    public abstract double Movimiento(int x1, int x2, int y1, int y2);
 }

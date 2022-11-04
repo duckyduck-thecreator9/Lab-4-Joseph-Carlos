@@ -11,4 +11,6 @@ package lab_4;
  */
 public interface Movement {
     
+//    public double Movimiento(Object mapa, int x1, int x2, int y1, int y2);
+//        
 }
