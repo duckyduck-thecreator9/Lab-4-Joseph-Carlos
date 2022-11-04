@@ -11,12 +11,14 @@ package lab_4;
  */
 public class Jugador {
     private String nombre;
+    private int cantvict;
 
     public Jugador() {
     }
 
-    public Jugador(String nombre) {
+    public Jugador(String nombre, int cantvict) {
         this.nombre = nombre;
+        this.cantvict = cantvict;
     }
 
     public String getNombre() {
@@ -25,6 +27,14 @@ public class Jugador {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public int getCantvict() {
+        return cantvict;
+    }
+
+    public void setCantvict(int cantvict) {
+        this.cantvict = cantvict;
     }
 
     @Override
