@@ -5,17 +5,15 @@
  */
 package lab_4;
 
-import java.awt.Color;
-
 /**
  *
  * @author joseph
  */
-    public class Aviones extends Vehiculos{
+public class Barcos {
     private int x;
     private int y;
 
-    public Aviones(int x, int y) {
+    public Barcos(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -24,7 +22,7 @@ import java.awt.Color;
         return x;
     }
 
-    public void setX(int x) {       
+    public void setX(int x) {
         if (x >= 0 && x <= 9) {
         this.x = x;
         }
@@ -35,7 +33,7 @@ import java.awt.Color;
     }
 
     public void setY(int y) {
-        if (x >= 0 && x <= 9) {
+        if (y == 1 && y == 7) {
         this.y = y;
         }
     }
