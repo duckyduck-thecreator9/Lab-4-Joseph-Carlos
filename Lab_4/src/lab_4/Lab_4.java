@@ -12,15 +12,17 @@ import java.util.Random;
  * @author joseph
  */
 public class Lab_4 {
-
+ static ArrayList Azul = new ArrayList();
+ static ArrayList Rojo = new ArrayList();
+ static ArrayList jugadores = new ArrayList();
+ static Object[][] mapa = new Object[10][10];
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        try{
         Random r = new Random();
-        ArrayList Azul = new ArrayList();
-        ArrayList Rojo = new ArrayList();
-        ArrayList jugadores = new ArrayList();
         String[] nombres = {"Azar", "Carlos", "Mufasa", "Milk", "slayer", "Biguy", "guy", "jocastle", "James", "Daniel"};
        
         //Creacion de jugadores azules
@@ -93,10 +95,20 @@ public class Lab_4 {
         System.out.println(Rojo.size());
         //fin rojos
         //creacion de matrix
+      
+            impriirmatriz();
+            
+        }catch(Exception ex){
+            System.out.println("Ha ocurrido un error!!");
+        }
         
+         
+  }
+    
+    static public void impriirmatriz() {
         Object[][] mapa = new Object[10][10];
 
-        for (int i = 0; i < mapa.length; i++) {
+        for (int i = 0; i < mapa.length + 1; i++) {
             for (int j = 0; j < mapa[i].length; j++) {
                 boolean pos = true;
                 int x;
@@ -166,6 +178,7 @@ public class Lab_4 {
                 if (pos == true) {
                     System.out.print("[ ]");
                 } else if (pos == false) {
+                    //System.out.print(mapa[i][j]);
                     System.out.print(ficha);
                 }
             }

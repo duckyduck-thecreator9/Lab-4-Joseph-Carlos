@@ -12,7 +12,6 @@ package lab_4;
 public class Submarinos extends Vehiculos{
     private int x;
     private int y;
-    private String n;
 
     public Submarinos(int x, int y, Jugador jugador) {
         super(jugador);
