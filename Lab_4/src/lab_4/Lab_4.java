@@ -97,6 +97,8 @@ public class Lab_4 {
         //creacion de matrix
       
             impriirmatriz();
+          //Movimiento que o existe
+            Ataque();
             
         }catch(Exception ex){
             System.out.println("Ha ocurrido un error!!");
@@ -108,7 +110,7 @@ public class Lab_4 {
     static public void impriirmatriz() {
         Object[][] mapa = new Object[10][10];
 
-        for (int i = 0; i < mapa.length + 1; i++) {
+        for (int i = 0; i < mapa.length; i++) {
             for (int j = 0; j < mapa[i].length; j++) {
                 boolean pos = true;
                 int x;
@@ -185,4 +187,24 @@ public class Lab_4 {
             System.out.println("");
         }
     }
+    
+    static public void Ataque(){
+        for (int i = 0; i < Rojo.size(); i++) {
+            if (Rojo.get(i) instanceof Aviones && Azul.get(i) instanceof Barcos) 
+                if (((Barcos)Azul.get(i)).getX() == ((Aviones)Rojo.get(i)).getX()) {
+                    ((Barcos)Azul.get(i)).setVida( ((Barcos)Azul.get(i)).getVida() - ((Aviones)Rojo.get(i)).getDano());
+            }
+            if (Rojo.get(i) instanceof Barcos && Azul.get(i) instanceof Submarinos) {
+                if (((Submarinos)Azul.get(i)).getX() == ((Barcos)Rojo.get(i)).getX()) {
+                    ((Submarinos)Azul.get(i)).setVida( ((Submarinos)Azul.get(i)).getVida() - ((Barcos)Rojo.get(i)).getDano());
+                }
+            }
+            if (Rojo.get(i) instanceof Submarinos && Azul.get(i) instanceof Submarinos) {
+                if (((Aviones)Azul.get(i)).getX() == ((Submarinos)Rojo.get(i)).getX()) {
+                    ((Aviones)Azul.get(i)).setVida( ((Aviones)Azul.get(i)).getVida() - ((Submarinos)Rojo.get(i)).getDano());
+                }
+            }
+        }
+    }
+
 }
